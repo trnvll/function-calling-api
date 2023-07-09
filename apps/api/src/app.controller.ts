@@ -25,6 +25,6 @@ export class AppController {
   @UseGuards(AuthGuard('jwt'))
   @UsePipes(new ValidationPipe())
   openai(@Body() openAIDto: OpenAIDto) {
-    return openAIDto.query
+    return this.appService.openai(openAIDto.query)
   }
 }
