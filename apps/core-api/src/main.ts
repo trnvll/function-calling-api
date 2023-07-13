@@ -11,13 +11,13 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule)
 
   const config = new DocumentBuilder()
-    .setTitle('Oktavolt REST API')
+    .setTitle('Okta REST API')
     .setDescription(
-      'REST API and JSON interface for company Oktavolt. It contains the core functionality for the application.',
+      'REST API and JSON interface for company Okta. It contains the core functionality for the application.',
     )
     .addServer(
       process.env.OPENAPI_SERVER_URL ?? '',
-      'Official Oktavolt REST API and JSON interface',
+      'Official Okta REST API and JSON interface',
     )
     .setVersion('1.0')
     .build()
